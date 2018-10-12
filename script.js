@@ -163,6 +163,7 @@ function paintEq(map,markers, north, south, east, west){
         ,success: function(data) {
                 var dataLength = data.earthquakes.length;
                 if(dataLength > 0){
+                  $('#errorSpan').html("");  
                     data = data.earthquakes;
                     var infoWins = [];
                     $.each(data,function(key,val){
@@ -188,7 +189,7 @@ function paintEq(map,markers, north, south, east, west){
                         markers.push(marker);
                     });
                 }else{
-                    alert("No earthquakes to show here!");    
+                    $('#errorSpan').html("Nothing to show!");  
                 }
             }
         ,error: function(jqXHR,textStatus,errorThrown){

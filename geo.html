@@ -29,6 +29,7 @@
             <hr class="my-4">
             <p>Type below the name of any city to find the last 10 earthquakes that occurred there</p>
             <input id="searchInput" type="text" placeholder="Search here">
+            <span id="errorSpan" class="text-danger font-italic font-weight-bold"></span>
             <div id="map"></div>
         </div><!--/EarthquakeByCity-->
 
@@ -56,7 +57,12 @@
 <!--Scripts-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="script.js"></script>
+
+
+
+<!--Prod-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaf4OdD_ywTRGqf6fR9mhyB9Vgsit1-EE&libraries=places&callback=initAutocomplete" 
 async defer></script>
+
 </body>
 </html>
